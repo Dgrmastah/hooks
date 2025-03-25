@@ -1,45 +1,12 @@
-## CUSTOM HOOKS 
+# React + Vite
 
-### Creando un Hook Personalizado con useEffect y useState
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-En este ejercicio, crearemos un hook personalizado utilizando los hooks `useEffect` y `useState`. Los hooks personalizados nos permiten reutilizar lógica en diferentes componentes.
+Currently, two official plugins are available:
 
-Con este hook conseguiremos hacer fetch a cualquier API para luego manejar los datos.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Vamos a elegir las APIs de Pokemon y Rick and Morty, donde nos traeremos un personaje en cada caso:
+## Expanding the ESLint configuration
 
-```js 
-  const urlPokemon = 'https://pokeapi.co/api/v2/pokemon/1';
-  const urlRick = 'https://rickandmortyapi.com/api/character/1';
-``` 
-
-Sigue estos pasos para crear un hook personalizado:
-
-1. Crearemos nuestro custom hook en el archivo `hooks/useCustomHook.js`.
-2. Importa los hooks necesarios de React que vamos a usar
-3. Define tu función de hook. El nombre de la función debe comenzar con `use` para indicar que es un hook
-
-Y ahora crea tu hook con `useEffect` y `useState`:
-
-### Utilizando el Hook Personalizado
-
-Para utilizar el hook personalizado en tus componentes, sigue estos pasos:
-
-1. Importa el hook personalizado en tu archivo de componente, en este caso será en `App.jsx`
-2. Llama al hook personalizado dentro de tu componente `App.jsx`
-3. Crearemos nuestra plantilla para poder renderizar el personaje de Pokemon con su nombre e imagen y el de Rick and Morty.
-
-```js 
-
-//ejemplo
-<h2>Personaje Pokemon</h2>
-<p>aquí el nombre</p>
-<img src="aqui la imagen"  />
-
-<h2>Personaje Rick and Morty</h2>
-<p>aquí el nombre</p>
-<img src="aqui la imagen"  />
-
-```
-
-Una vez funcione puedes probar a hacerlo por componentes pasándole las `props` de nombre e imagen.
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
